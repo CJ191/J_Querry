@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <!-- $(selector).action()
+    $ jquerry acces or define cheyan aanu use cheyunne -->
+
+    <h1 class="h1">Welcome to JQuerry</h1>
+    <button id="btn1">Click</button>
+
+    <h1 class="h2">Haiiiiiii</h1>
+
+    <h1 class="h3">Mouse Enter</h1>
+    
+    <h1 class="h4">Mouse Down : click cheyumbo working</h1>
+
+    <h1 class="h5">Mouse Up : click cheyth release cheyumbo working</h1>
+
+    <h1 class="h6">Mouse Hover</h1>
+
+    <input type="text" class="input" placeholder="Enter Your Name">
+
+    <h1 class="h7">Welcome to JQuerry</h1>
+    <h1 class="h7">Welcome to JQuerry</h1>
+    <h1 class="h7">Welcome to JQuerry</h1>
+    <h1 class="h7">Welcome to JQuerry</h1>
+    <h1 class="h7">Welcome to JQuerry</h1>
+
+
+
+    <script>
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+                $('.h1').hide();
+            })
+
+        })
+
+        $(document).ready(function(){
+            $('.h2').dblclick(function(){
+                $(this).hide();        //current element ethano select ayyittulath ath hide cheyum
+            })
+        })
+
+        $(document).ready(function(){
+            $('.h3').mouseenter(function(){
+                alert('Mouse enter')
+            })
+            $('.h3').mouseleave(function(){
+                alert('Mouse exit')
+            })
+        })
+
+        $(document).ready(function(){
+            $('.h4').mousedown(function(){
+                $(this).hide();
+            })
+        })
+
+        $(document).ready(function(){
+            $('.h5').mouseup(function(){
+                $(this).hide();
+            })
+        })
+
+        $(document).ready(function(){
+            $('.h6').mouseover(function(){
+                $(this).hide();
+            })
+        })
+
+        $(document).ready(function(){
+            $('.input').focus(function(){
+                $(this).css("color",'red')
+            }),
+            $('.input').blur(function(){
+                $(this).css('color','black');
+            })
+        })
+
+        $(document).ready(function(){
+            $('.h7').on({
+                click : function(){
+                    $(this).hide();
+                },
+                mouseenter : function(){
+                    $(this).css('color','blue')
+                },
+                mouseout : function(){
+                    $(this).css('color','black')
+                }
+            })
+        })
+    </script>
+</body>
+</html>
