@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+
+    <h1 class="h1">Welcome to JQuerry</h1>
+    <button id="hide1">Hide</button>
+    <button id="show1">Show</button>
+    <button id="toggle1">Toggle</button>
+
+    <div class="box1" style="width: 100px; height: 100px; background-color: red; display: none; "></div>
+    <button id="fade1">Fade In</button>  
+
+    <div class="box2" style="width: 100px; height: 100px; background-color: blue; "></div>
+    <button id="fade2">Fade Out</button>  
+
+    <div class="box3" style="width: 100px; height: 100px; background-color: green; "></div>
+    <button id="fade3">Fade Toggle</button>  
+
+    <div class="div1" style="border: 2px solid red; text-align: center; background-color: aqua; width: 500px; margin: auto; height: 30px;">haloooo!!!!!!!!</div>
+    <div class="div2" style="display: none; border: 2px solid red; text-align: center; background-color: aquamarine; width: 500px; margin: auto; height: 30px;">Slide Down!!!!!!</div>
+    
+    <br><br>
+
+    <div class="div3" style="border: 2px solid red; text-align: center; background-color: rgb(144, 240, 9); width: 500px; margin: auto; height: 30px;">haloooo!!!!!!!!</div>
+    <div class="div4" style=" border: 2px solid red; text-align: center; background-color: rgb(97, 213, 104); width: 500px; margin: auto; height: 30px;">Slide Up!!!!!!</div>
+    
+    <br><br>
+    
+    <div class="div5" style="border: 2px solid red; text-align: center; background-color: rgb(237, 214, 40); width: 500px; margin: auto; height: 30px;">haloooo!!!!!!!!</div>
+    <div class="div6" style="display: none; border: 2px solid red; text-align: center; background-color: rgb(197, 102, 48); width: 500px; margin: auto; height: 30px;">Slide Toggle!!!!!!</div>
+    
+    <script>
+        $(document).ready(function(){
+            $('#hide1').click(function(){
+                $('.h1').hide(1000);
+            })
+            $('#show1').click(function(){
+                $('.h1').show(1000);
+            })
+        })
+
+        $(document).ready(function(){
+            $('#toggle1').click(function(){
+                $('.h1').toggle(2000);
+            })
+        })
+
+        $(document).ready(function(){
+            $('#fade1').click(function(){
+                $('.box1').fadeIn()
+            })
+        })
+
+        $(document).ready(function(){
+            $('#fade2').click(function(){
+                $('.box2').fadeOut('slow')
+            })
+        })
+
+        $(document).ready(function(){
+            $('#fade3').click(function(){
+                $('.box3').fadeToggle(4000)
+            })
+        })
+
+        $(document).ready(function(){
+            $('.div1').click(function(){
+                $('.div2').slideDown()
+            })
+        })
+
+        $(document).ready(function(){
+            $('.div3').click(function(){
+                $('.div4').slideUp('slow')
+            })
+        })
+
+        $(document).ready(function(){
+            $('.div5').click(function(){
+                $('.div6').slideToggle(3000)
+            })
+        })
+    </script>
+
+
+
+</body>
+</html>
