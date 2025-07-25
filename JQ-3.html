@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+    
+    <h1 class="h1">Haiiiii</h1>
+    <button id="btn1">Call Back</button>
+
+    <h1 class="h2">Haiiiii</h1>
+    <button id="btn2">Chaining</button>
+
+    <h1 class="h3">Haiiiii</h1>
+    <button id="btn3">Get the Text</button>
+
+    <h1 class="h4">Hai<i>iiiiii</i>i</h1>
+    <button id="btn4">Get the Code</button><br><br>
+
+    <input class="input1" type="text" placeholder="Enter Your name">
+    <button id="btn5">Get the Value</button><br><br>
+
+    <a href="JQ-1.html" class="link1" style="text-decoration: none; color: red;">Click</a><br><br>
+    <button id="btn6">Get the Attribute</button>
+
+    <script>
+
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+                $('.h1').hide(3000,function(){
+                    alert('Call Back')       
+                })
+            })
+        })            //callback koduthal first func fully execute aavunnavare matte func wait cheypikkum
+
+        $(document).ready(function(){
+            $('#btn2').click(function(){
+                $('.h2').css('color','green').slideUp(3000).slideDown(2000)
+            })
+        })
+
+        $(document).ready(function(){
+            $('#btn3').click(function(){
+                alert('Text : '+$('.h3').text())
+            })
+        })
+
+        $(document).ready(function(){
+            $('#btn4').click(function(){
+                alert('Code : '+$('.h4').html())
+            })
+        })
+
+        $(document).ready(function(){
+            $('#btn5').click(function(){
+                alert('Value : '+$('.input1').val())
+            })
+        })
+
+        $(document).ready(function(){
+            $('#btn6').click(function(){
+                alert('Attribute : '+$('.link1').attr('href'))
+            })
+        })
+    </script>
+
+</body>
+</html>
