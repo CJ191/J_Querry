@@ -30,6 +30,10 @@
             color: green;
         }
 
+        .colorr2{
+            color: violet;
+        }
+
     </style>
 
     <h1 id="data1">Welcome to J-Querry</h1>
@@ -58,8 +62,15 @@
     <h2>Sample</h2>
     <h3>Sample</h3>
     <h4>Sample</h4>
-    <button id="addclass">Add Class</button>
-    <button id="toggleclass">Toggle Class</button>
+    <button id="addclass1">Add Class</button>
+    <button id="toggleclass1">Toggle Class</button>
+
+    <h1 id="1">Sample with ID</h1>
+    <h2 id="2">Sample with ID</h2>
+    <h3 id="3">Sample with ID</h3>
+    <h4 id="4">Sample with ID</h4>
+    <button id="addclass2">Add Class</button>
+    <button id="toggleclass2">Toggle Class</button>
     <script>
 
         $(document).ready(function(){
@@ -81,11 +92,17 @@
             $('#empty').click(function(){
                 $('#div1').empty()
             }),
-            $('#addclass').click(function(){
+            $('#addclass1').click(function(){
                 $('h1, h2, h3, h4').addClass('colorr1')
             }),
-            $('#toggleclass').click(function(){
+            $('#toggleclass1').click(function(){
                 $('h1, h2, h3, h4').toggleClass('colorr1')
+            }),
+            $('#addclass2').click(function(){
+                $('#1, #2, #3, #4').addClass('colorr2')
+            }),
+            $('#toggleclass2').click(function(){
+                $('#1, #2, #3, #4').toggleClass('colorr2')
             })
         })
 
