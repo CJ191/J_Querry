@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+
+    <style>
+
+        #data1{
+            color: red;
+        }
+
+        #data2{
+            color: green;
+        }
+
+        #div1{
+            background-color: black;
+            color: yellow;
+            width: 500px;
+            height: 200px;
+        }
+
+        .colorr1{
+            color: green;
+        }
+
+    </style>
+
+    <h1 id="data1">Welcome to J-Querry</h1>
+    <button id="btnappend">Append</button>
+    <button id="btnprepend">Prepend</button>
+
+    <br><br>
+
+    <h1 id="data2">Welcome to J-Querry</h1>
+    <button id="after">AFTER</button>
+    <button id="before">BEFORE</button>
+
+    <br><br>
+
+    <div id="div1">
+        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+             Inventore fugit voluptatem odio quod cumque ipsam quo dicta,
+              quas praesentium eveniet nulla quis, voluptate neque quidem quae a deleniti,
+               soluta omnis.</h3>
+    </div><br>
+    <button id="remove">Remove</button>
+    <button id="empty">Empty</button>
+    <br>
+  
+    <h1>Sample</h1>
+    <h2>Sample</h2>
+    <h3>Sample</h3>
+    <h4>Sample</h4>
+    <button id="addclass">Add Class</button>
+    <button id="toggleclass">Toggle Class</button>
+    <script>
+
+        $(document).ready(function(){
+            $('#btnappend').click(function(){
+                $('#data1').append("<i> APPEND</i>")
+            }),
+            $('#btnprepend').click(function(){
+                $('#data1').prepend('<b>PREPEND </b>')
+            }),
+            $('#after').click(function(){
+                $('#data2').after('AFTER')
+            }),
+            $('#before').click(function(){
+                $('#data2').before('BEFORE')
+            }),
+            $('#remove').click(function(){
+                $('#div1').remove()
+            }),
+            $('#empty').click(function(){
+                $('#div1').empty()
+            }),
+            $('#addclass').click(function(){
+                $('h1, h2, h3, h4').addClass('colorr1')
+            }),
+            $('#toggleclass').click(function(){
+                $('h1, h2, h3, h4').toggleClass('colorr1')
+            })
+        })
+
+    </script>
+</body>
+</html>
